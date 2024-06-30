@@ -14,22 +14,24 @@ export const Header: React.FC = () => {
   const handleLogout = () => {
     dispatch(setLogoutData());
   };
+  const handleClose = () => {
+    setIsModalOpen(false);
+  };
+  const handleOpen = () => {
+    setIsModalOpen(true);
+  };
   return (
     <header className={styles.header}>
       <Link to="/">
         <h1 className={styles.siteName}>Фильмопоиск</h1>
       </Link>
       {!isAuthenticated ? (
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className={styles.loginButton}
-        >
-          Войти
-          <AuthModal
-            isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
-          />
-        </button>
+        <>
+          <button onClick={handleOpen} className={styles.loginButton}>
+            Войти
+          </button>
+          <AuthModal isOpen={isModalOpen} onClose={handleClose} />
+        </>
       ) : (
         <button onClick={handleLogout} className={styles.logoutButton}>
           Выйти

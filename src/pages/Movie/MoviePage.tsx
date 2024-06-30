@@ -18,17 +18,50 @@ const MoviePage: React.FC = () => {
   ));
   console.log(movie);
   return (
-    <div className={styles.moviePage}>
-      <img src={movie.poster} />
-      <h1>{movie.title}</h1>
-      <p>{movie.description}</p>
-      <p>Year: {movie.release_year}</p>
-      <p>Genre: {movie.genre}</p>
-      <p>Rating: {movie.rating}</p>
-      <p>total_rates_count: {movie.total_rates_count}</p>
+    <>
+      <div className={styles.movieDetailsContainer2}>
+        <img
+          src={movie.poster}
+          alt={movie.title}
+          className={styles.moviePosterImg}
+        />
+        <div className={styles.movieDetailsContainer1}>
+          <h1 className={styles.titleHeading}>{movie.title}</h1>
+          <div className={styles.movieDetailsContainer3}>
+            <div className={styles.movieDetailsRow}>
+              <div className={styles.fantasyInfoContainer}>
+                <span className={styles.genreLabel}>Жанр:</span>
+                <span className={styles.fantasyMovieDetailsTextStyle}>
+                  {movie.genre}
+                </span>
+              </div>
+            </div>
+            <div className={styles.movieDetailsRow}>
+              <div className={styles.fantasyInfoContainer}>
+                <span className={styles.genreLabel}>Год выпуска:</span>
+                <span className={styles.fantasyMovieDetailsTextStyle}>
+                  {movie.release_year}
+                </span>
+              </div>
+            </div>
+            <div className={styles.movieDetailsRow}>
+              <div className={styles.fantasyInfoContainer}>
+                <span className={styles.genreLabel}>Рейтинг:</span>
+                <span className={styles.fantasyMovieDetailsTextStyle}>
+                  {movie.rating}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className={styles.movieDetailsColumn}>
+            <h2 className={styles.fantasyDescriptionHeading}>Описание</h2>
+            <p className={styles.storyTextStyle}>{movie.description}</p>
+          </div>
+        </div>
+      </div>
       <h2>Actors</h2>
       <Carousel items={actorItems} />
-    </div>
+    </>
   );
 };
 

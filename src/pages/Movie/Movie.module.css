@@ -1,22 +1,136 @@
-.moviePage {
-    padding: 20px;
-}
-
-.moviePage h1 {
-    font-size: 2em;
-}
-
-.moviePage p {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.moviePage h2 {
-    margin-top: 20px;
-    font-size: 1.5em;
-}
-
-.moviePage img {
+.movieDetailsContainer2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row; /* Располагаем элементы в ряд */
+    align-items: flex-start; /* Выравниваем по верхнему краю */
+    justify-content: center; /* Центрируем по горизонтали */
     max-width: 100%;
-    height: auto;
+    padding: 24px;
+    background: white;
+    border-radius: 8px;
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+}
+
+.moviePosterImg {
+    box-sizing: border-box;
+    display: block;
+    width: 100%; /* Занимает всю доступную ширину */
+    max-width: 400px; /* Максимальная ширина изображения */
+    max-height: 500px; /* Максимальная высота изображения */
+    border: none;
+    border-radius: 8px;
+    object-fit: cover; /* Растягиваем изображение, чтобы оно полностью заполняло контейнер */
+}
+
+.movieDetailsContainer1 {
+    flex: 1 1 auto; /* Растягиваем до возможного размера */
+    margin-left: 31px; /* Отступ слева */
+    max-width: 70%;
+}
+
+
+.titleHeading {
+    padding: 0;
+    margin: 0;
+    font: 600 32px/32px Roboto, sans-serif;
+    color: #1b1f23;
+}
+
+.movieDetailsContainer3 {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 36px;
+}
+
+.movieDetailsRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 16px;
+}
+
+.fantasyInfoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.genreLabel {
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0;
+    font: 600 20px Roboto, sans-serif;
+    color: var(--weak-text, #ABABAB);
+}
+
+.fantasyMovieDetailsTextStyle {
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0;
+    margin-left: 6px;
+    font: 400 20px Roboto, sans-serif;
+    color: #1b1f23;
+}
+
+.fantasyDescriptionHeading {
+    padding: 0;
+    margin: 0;
+    margin-top: 16px;
+    font: 600 20px Roboto, sans-serif;
+    color: #1b1f23;
+}
+
+.storyTextStyle {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 16px;
+    font: 400 16px/24px Roboto, sans-serif;
+    color: #1b1f23;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .movieDetailsContainer2 {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .moviePosterImg {
+        max-width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .movieDetailsContainer1 {
+        margin-left: 0;
+    }
+
+    .titleHeading {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .genreLabel, .fantasyMovieDetailsTextStyle {
+        font-size: 16px;
+    }
+
+    .fantasyDescriptionHeading {
+        font-size: 18px;
+    }
+
+    .storyTextStyle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.movieDetailsColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 16px;
 }

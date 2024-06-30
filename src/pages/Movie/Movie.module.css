@@ -1,0 +1,22 @@
+.moviePage {
+    padding: 20px;
+}
+
+.moviePage h1 {
+    font-size: 2em;
+}
+
+.moviePage p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.moviePage h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.moviePage img {
+    max-width: 100%;
+    height: auto;
+}

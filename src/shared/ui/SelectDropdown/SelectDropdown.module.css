@@ -1,0 +1,66 @@
+/* src/shared/ui/SelectDropdown/SelectDropdown.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 8px;
+  color: var(--basic-text);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: white;
+  transition: border-color 0.2s;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #333333;
+}
+
+/* SelectDropdown.module.css */
+
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("src/assets/arrows/arrow-down-icon.svg"); /* Путь к файлу SVG-файлу */
+  background-position: calc(100% - 17.04px) center; /* Устанавливаем точный внешний отступ */
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 360px;
+  height: 40px;
+  padding: 10px 16px 10px 16px;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #e1e3e6;
+  color: var(--basic-text); /* Серый цвет текста */
+}
+
+.select option {
+  /* Основные стили для опций */
+  background-color: #fff; /* Фон опций */
+  color: var(--basic-text); /* Цвет текста опций */
+}
+
+.select option:checked {
+  /* Стили для выбранной опции */
+  background-color: #fff; /* Фон выбранной опции */
+  color: var(--basic-text); /* Цвет текста выбранной опции */
+}
+
+/* Стили для первой опции, когда она выбрана */
+.selectEmpty {
+  color: var(--weak-text); /* Цвет текста первой выбранной опции */
+}
+
+.select option:first-child {
+  color: var(--weak-text); /* Цвет текста первой выбранной опции */
+}

@@ -1,0 +1,23 @@
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--background-color-basic);
+    max-width: 400px;
+}
+
+.inputField {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+    padding-left: 35px; /* Добавляем отступ для иконки */
+    background: url('src/assets/misc/search-icon.svg') no-repeat 5px center;
+    background-size: 20px 20px; /* Размер иконки */
+}
+
+.inputField::placeholder {
+    color: var(--weak-text);
+}

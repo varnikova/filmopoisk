@@ -1,0 +1,39 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carouselContent {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.carouselContent::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.carouselItem {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    width: calc(100% / 5); /* Adjust the number of items per view */
+    box-sizing: border-box;
+}
+
+.carouselButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carouselButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

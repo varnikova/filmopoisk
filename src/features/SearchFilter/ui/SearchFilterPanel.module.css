@@ -1,0 +1,27 @@
+/* src/features/SearchFilterPanel/SearchFilterPanel.module.css */
+.filters {
+    flex-direction: column;
+    display: flex;
+    min-width: 408px;
+    top: 108px;
+    left: 32px;
+    padding: 24px;
+    gap: 20px;
+    border-radius: 8px;
+    background: var(--background-color-basic);
+
+}
+
+.searchInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.filtersBlockTitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+}

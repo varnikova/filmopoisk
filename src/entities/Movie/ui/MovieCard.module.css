@@ -1,0 +1,69 @@
+.card {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+}
+
+.poster {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.details {
+    flex: 1;
+}
+
+.title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.infoContainer {
+    display: flex;
+    align-items: flex-start;
+    margin: 5px 0;
+}
+
+.label {
+    color: var(--weak-text);
+    margin-right: 10px;
+    min-width: 150px; /* Настройте ширину по вашему усмотрению */
+    text-align: left;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.info, .description {
+    margin: 0;
+    flex: 1;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.description {
+
+    color: #555;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.stars {
+    display: flex;
+    margin-top: 10px;
+}
+
+.star {
+    margin: 0 5px;
+    cursor: pointer;
+}
